@@ -18,18 +18,20 @@ body {
   text-align: center;
 }
 
-.title {
+.header__title {
   display: inline-block;
-  margin: 0;
   font-size: 4rem;
   color: #333333;
   overflow: hidden;
 }
 
-.title::after {
+.header__title_margin_none {
+  margin: 0;
+}
+
+.header__title_hoverable::after {
   display: block;
   position: relative;
-  /* top: -4rem; */
   left: -500px;
   content: "";
   width: 100%;
@@ -38,6 +40,6 @@ body {
   transition: left 1s 0s;
 }
 
-.title:hover::after {
+.header__title_hoverable:hover::after {
   left: 0px;
 }
