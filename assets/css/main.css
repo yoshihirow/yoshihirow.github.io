@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #eeeeee;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  margin: 0;
+  font-size: 4rem;
+  color: #333333;
+  overflow: hidden;
+}
+
+.title::after {
+  display: block;
+  position: relative;
+  /* top: -4rem; */
+  left: -500px;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: #333333;
+  transition: left 1s 0s;
+}
+
+.title:hover::after {
+  left: 0px;
+}
