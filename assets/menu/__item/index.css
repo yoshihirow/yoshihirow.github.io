@@ -1,0 +1,53 @@
+.menu__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  height: 10rem;
+  width: 10rem;
+  background: #222222;
+  border-radius: 100%;
+  transition: 3s ease-out;
+}
+
+.menu__item_animation-delay_0 {
+  animation: 5s infinite updown;
+}
+
+.menu__item_animation-delay_1-2 {
+  animation: 4s .5s infinite updown;
+}
+
+.menu__item_animation-delay_1-3 {
+  animation: 4.5s .3s infinite updown;
+}
+
+.menu__message {
+  color: #eeeeee;
+  transition: opacity .5s ease-out;
+  opacity: 0;
+}
+
+.menu__item:hover {
+  height: 30rem;
+  width: 30rem;
+}
+
+.menu__item:hover .menu__message {
+  opacity: 1;
+}
+
+@keyframes updown {
+  50% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
