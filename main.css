@@ -1,0 +1,33 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: transparent;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.contents {
+  height: 400px;
+  width: 70%;
+  overflow-y: scroll;
+  border: #f3f3f3f3 solid 2px;
+  border-radius: 10px;
+}
+
+.contents__index {
+  height: 500px;
+}
+
+.indexWrapper {
+  padding-left: 10px;
+}
+
+.indexList__index.active {
+  color: #f3f3f3f3;
+  background-color: #333333;
+}
