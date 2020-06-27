@@ -1,0 +1,20 @@
+.title {
+  text-align: center;
+}
+
+.contents__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 50px;
+  background: #cccccc;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.4s, transform 1s;
+}
+
+.contents__content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
