@@ -22,17 +22,22 @@
 }
 
 .main-contents > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 30px auto;
   padding: 10px;
-  max-width: 800px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
   text-align: center;
+  background: #fdfdfd;
   box-shadow: 5px 5px 5px 0px #eee;
-  border-radius: 10px;
   opacity: 0;
   transform: translateY(40px);
   transition: 1.4s;
   text-shadow: 3px 3px 3px #ddd;
-  color: white;
+  cursor: pointer;
 }
 
 .main-contents > section.show {
@@ -40,10 +45,14 @@
   transform: translateY(0);
 }
 
-.main-contents > section > h2 {
-  margin-bottom: 10px;
+.main-contents > section > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 4.0rem;
+  color: white;
 }
 
-.main-contents > section > a {
-  font-size: 3rem;
+.main-contents > section:hover {
+  box-shadow: inset -5px -5px 15px 0px #eee;
 }
