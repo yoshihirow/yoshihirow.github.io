@@ -1,4 +1,5 @@
 @import '../css/_base.css';
+@import '../css/_button.css';
 
 .shutter {
   position: absolute;
