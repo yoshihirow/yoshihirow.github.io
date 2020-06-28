@@ -33,14 +33,14 @@
   animation: .5s 1s appearFromTop forwards ease-out;
 }
 
-.left-menu__list {
+.left-menu__nav {
   display: flex;
   height: 80px;
   align-items: center;
   color: #1e316a;
 }
 
-.left-menu__list > li {
+.left-menu__nav > li {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -49,11 +49,11 @@
   height: 100%;
 }
 
-.left-menu__list > li > span {
+.left-menu__nav > li > span {
   overflow: hidden;
 }
 
-.left-menu__list > li > span::after {
+.left-menu__nav > li > span::after {
   display: block;
   content: "";
   position: relative;
@@ -65,11 +65,11 @@
   transition: .5s;
 }
 
-.left-menu__list > li:hover > span::after {
+.left-menu__nav > li:hover > span::after {
   left: 0;
 }
 
-.left-menu__list > li:last-child {
+.left-menu__nav > li:last-child {
   border-right: 1px #eee solid;
 }
 
