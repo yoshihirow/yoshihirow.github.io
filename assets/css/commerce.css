@@ -1,5 +1,14 @@
 @import '../css/_base.css';
 
+.shutter {
+  position: absolute;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  animation: 1s openFromRight forwards ease-out;
+}
+
 .notice {
   background: #1e316a;
 }
@@ -12,7 +21,13 @@
 }
 
 .header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
   border-bottom: 2px #eee solid;
+  background: white;
+  transform: translateY(-200px);
+  animation: .5s 1s appearFromTop forwards ease-out;
 }
 
 .left-menu__list {
@@ -80,4 +95,20 @@
 .highlight__holder > h2 {
   font-size: 3rem;
   font-weight: lighter;
+}
+
+@keyframes openFromRight {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+@keyframes appearFromTop {
+  100% {
+    transform: translateY(0);
+  }
 }
