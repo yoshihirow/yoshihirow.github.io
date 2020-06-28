@@ -10,11 +10,12 @@
   color: #aaa;
   font-size: 2rem;
   animation: 5s 3s pop infinite;
+  transition: .3s;
 }
 
 .top-button:hover {
   box-shadow: inset -5px -5px 5px 0px #eee;
-  color: #888;
+  transform: translateX(-5px);
   animation: none;
 }
 
