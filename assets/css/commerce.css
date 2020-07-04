@@ -76,8 +76,9 @@
 .left-menu__bigger-nav {
   position: absolute;
   top: -300px;
+  display: flex;
+  padding: 20px;
   background: white;
-  height: 300px;
   width: 100%;
   transition: top .4s ease-out, opacity .2s;
   z-index: -1;
@@ -92,6 +93,30 @@
 .left-menu__bigger-nav:hover {
   top: 120px;
   opacity: 1
+}
+
+.left-menu__bigger-nav > div {
+  border-right: #eee 1px solid;
+  margin: 20px 0;
+}
+
+.left-menu__bigger-nav > div > * {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s .5s;
+}
+
+.left-menu__nav-button:hover ~ .left-menu__bigger-nav > div > *,
+.left-menu__bigger-nav:hover > div > * {
+  opacity: 1;
+}
+
+.left-menu__bigger-nav > div:last-child {
+  border-right: none;
+}
+
+.left-menu__bigger-nav > div > ul > li {
+  padding: 10px 0;
 }
 
 .left-menu__nav {
