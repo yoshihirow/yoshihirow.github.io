@@ -1,20 +1,21 @@
 .top-button {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
-  left: 50%;
+  left: 20px;
   background: white;
-  box-shadow: 2px 2px 5px 2px #eee;
+  box-shadow: 2px 2px 5px 2px #555;
   border-radius: 100%;
   height: 80px;
   width: 80px;
   color: #aaa;
   font-size: 2rem;
   animation: 5s 3s pop infinite;
+  transition: .3s;
 }
 
 .top-button:hover {
   box-shadow: inset -5px -5px 5px 0px #eee;
-  color: #888;
+  transform: translateX(-5px);
   animation: none;
 }
 

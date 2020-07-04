@@ -1,8 +1,13 @@
+@import url('./base.css');
+@import url('./button.css');
+
 .shutter {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 9999;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: white;
   animation: 1s openFromRight forwards ease-out;
 }
@@ -28,14 +33,98 @@
   animation: .5s 1s appearFromTop forwards ease-out;
 }
 
-.left-menu__list {
+.left-menu {
   display: flex;
-  height: 80px;
-  align-items: center;
   color: #1e316a;
+  align-items: center;
+  height: 80px;
 }
 
-.left-menu__list > li {
+.left-menu__nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  width: 80px;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.left-menu__nav-button > span{
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  height: 2px;
+  width: 20px;
+  background: #1e316a;
+}
+
+.left-menu__nav-button > span::before{
+  content: "";
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  height: 2px;
+  width: 20px;
+  background: inherit;
+}
+
+.left-menu__bigger-nav {
+  position: absolute;
+  top: -300px;
+  display: flex;
+  padding: 20px;
+  background: white;
+  width: 100%;
+  transition: top .4s ease-out, opacity .2s;
+  z-index: -1;
+  opacity: 0
+}
+
+.left-menu__nav-button:hover ~ .left-menu__bigger-nav {
+  top: 120px;
+  opacity: 1
+}
+
+.left-menu__bigger-nav:hover {
+  top: 120px;
+  opacity: 1
+}
+
+.left-menu__bigger-nav > div {
+  border-right: #eee 1px solid;
+  margin: 20px 0;
+}
+
+.left-menu__bigger-nav > div > * {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s .5s;
+}
+
+.left-menu__nav-button:hover ~ .left-menu__bigger-nav > div > *,
+.left-menu__bigger-nav:hover > div > * {
+  opacity: 1;
+}
+
+.left-menu__bigger-nav > div:last-child {
+  border-right: none;
+}
+
+.left-menu__bigger-nav > div > ul > li {
+  padding: 10px 0;
+}
+
+.left-menu__nav {
+  display: flex;
+  height: 100%;
+}
+
+.left-menu__nav > li {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -44,11 +133,11 @@
   height: 100%;
 }
 
-.left-menu__list > li > span {
+.left-menu__nav > li > span {
   overflow: hidden;
 }
 
-.left-menu__list > li > span::after {
+.left-menu__nav > li > span::after {
   display: block;
   content: "";
   position: relative;
@@ -60,11 +149,11 @@
   transition: .5s;
 }
 
-.left-menu__list > li:hover > span::after {
+.left-menu__nav > li:hover > span::after {
   left: 0;
 }
 
-.left-menu__list > li:last-child {
+.left-menu__nav > li:last-child {
   border-right: 1px #eee solid;
 }
 
